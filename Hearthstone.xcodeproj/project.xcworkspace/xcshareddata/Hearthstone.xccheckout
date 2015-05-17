@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C0FFAFEC-6CF4-4401-92C8-06A3A3A4374B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hearthstone</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</key>
+		<string>https://github.com/iScissors/Hearthstone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hearthstone/Hearthstone.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iScissors/Hearthstone.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hearthstone</string>
+		</dict>
+	</array>
+</dict>
+</plist>
