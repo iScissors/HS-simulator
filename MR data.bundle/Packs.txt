@@ -1,2 +1,2 @@
-default
-gvg
+Classic
+Goblins vs Gnomes

@@ -22,9 +22,11 @@
     [MagicalRecord setupAutoMigratingCoreDataStack];
     
     [EntityManager setRarityModelData];
-    [EntityManager setQualityModelData];
     [EntityManager setPackModelData];
-//    [EntityManager setCardModelData];
+    
+    // Request
+    [EntityManager setCardModelData:@"Classic"];
+//    [EntityManager setCardModelData:@"Goblins vs Gnomes"];
     
     return YES;
 }

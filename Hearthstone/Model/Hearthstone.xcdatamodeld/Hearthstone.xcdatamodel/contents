@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="AbstractModel" representedClassName="AbstractModel" isAbstract="YES" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="CardModel" representedClassName="CardModel" parentEntity="AbstractModel" syncable="YES">
+    <entity name="CardModel" representedClassName="CardModel" syncable="YES">
+        <attribute name="cardId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageGolden" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="packType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PackModel" inverseName="cards" inverseEntity="PackModel" syncable="YES"/>
-        <relationship name="quality" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QualityModel" inverseName="cards" inverseEntity="QualityModel" syncable="YES"/>
         <relationship name="rarity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RarityModel" inverseName="cards" inverseEntity="RarityModel" syncable="YES"/>
     </entity>
-    <entity name="PackModel" representedClassName="PackModel" parentEntity="AbstractModel" syncable="YES">
+    <entity name="PackModel" representedClassName="PackModel" syncable="YES">
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="packType" inverseEntity="CardModel" syncable="YES"/>
     </entity>
-    <entity name="QualityModel" representedClassName="QualityModel" parentEntity="AbstractModel" syncable="YES">
-        <attribute name="golden" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="quality" inverseEntity="CardModel" syncable="YES"/>
-    </entity>
-    <entity name="RarityModel" representedClassName="RarityModel" parentEntity="AbstractModel" syncable="YES">
+    <entity name="RarityModel" representedClassName="RarityModel" syncable="YES">
         <attribute name="rarityType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="rarity" inverseEntity="CardModel" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AbstractModel" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="CardModel" positionX="-36" positionY="9" width="128" height="103"/>
-        <element name="QualityModel" positionX="-18" positionY="27" width="128" height="73"/>
-        <element name="RarityModel" positionX="-54" positionY="0" width="128" height="73"/>
+        <element name="CardModel" positionX="-36" positionY="9" width="128" height="133"/>
         <element name="PackModel" positionX="0" positionY="63" width="128" height="73"/>
+        <element name="RarityModel" positionX="-54" positionY="0" width="128" height="73"/>
     </elements>
 </model>

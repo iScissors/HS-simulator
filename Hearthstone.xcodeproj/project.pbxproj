@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */; };
+		842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0FE1B0BE24100D77FAA /* CardModel.m */; };
 		8477D2FA1B06730000DBAEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D2F91B06730000DBAEBE /* main.m */; };
 		8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D2FC1B06730000DBAEBE /* AppDelegate.m */; };
 		8477D3081B06730000DBAEBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3071B06730000DBAEBE /* Images.xcassets */; };
@@ -16,9 +18,7 @@
 		8477D3271B06748E00DBAEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3251B06748E00DBAEBE /* Main.storyboard */; };
 		8477D32B1B06985A00DBAEBE /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D32A1B06985A00DBAEBE /* Card.m */; };
 		8477D32F1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8477D32D1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld */; };
-		8477D3321B06A58400DBAEBE /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3311B06A58400DBAEBE /* CardModel.m */; };
 		8477D3351B06A58500DBAEBE /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3341B06A58500DBAEBE /* AbstractModel.m */; };
-		8477D3381B06A58500DBAEBE /* QualityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3371B06A58500DBAEBE /* QualityModel.m */; };
 		8477D33B1B06A58500DBAEBE /* RarityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D33A1B06A58500DBAEBE /* RarityModel.m */; };
 		8477D33E1B06A58500DBAEBE /* PackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D33D1B06A58500DBAEBE /* PackModel.m */; };
 		8477D3411B06A70300DBAEBE /* Pack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3401B06A70300DBAEBE /* Pack.m */; };
@@ -39,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		6D05708BB9E878A54985D4F7 /* Pods-Hearthstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.debug.xcconfig"; sourceTree = "<group>"; };
+		842CF0F71B0BD47A00D77FAA /* CardModel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CardModel+Addition.h"; sourceTree = "<group>"; };
+		842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CardModel+Addition.m"; sourceTree = "<group>"; };
+		842CF0FD1B0BE24100D77FAA /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
+		842CF0FE1B0BE24100D77FAA /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
 		8477D2F41B06730000DBAEBE /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477D2F81B06730000DBAEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8477D2F91B06730000DBAEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,12 +59,8 @@
 		8477D3291B06985A00DBAEBE /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		8477D32A1B06985A00DBAEBE /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		8477D32E1B069EDD00DBAEBE /* Hearthstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hearthstone.xcdatamodel; sourceTree = "<group>"; };
-		8477D3301B06A58400DBAEBE /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
-		8477D3311B06A58400DBAEBE /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
 		8477D3331B06A58500DBAEBE /* AbstractModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractModel.h; sourceTree = "<group>"; };
 		8477D3341B06A58500DBAEBE /* AbstractModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractModel.m; sourceTree = "<group>"; };
-		8477D3361B06A58500DBAEBE /* QualityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QualityModel.h; sourceTree = "<group>"; };
-		8477D3371B06A58500DBAEBE /* QualityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QualityModel.m; sourceTree = "<group>"; };
 		8477D3391B06A58500DBAEBE /* RarityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityModel.h; sourceTree = "<group>"; };
 		8477D33A1B06A58500DBAEBE /* RarityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityModel.m; sourceTree = "<group>"; };
 		8477D33C1B06A58500DBAEBE /* PackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackModel.h; sourceTree = "<group>"; };
@@ -99,6 +99,15 @@
 				8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842CF0F61B0BD47A00D77FAA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				842CF0F71B0BD47A00D77FAA /* CardModel+Addition.h */,
+				842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		8477D2EB1B06730000DBAEBE = {
@@ -188,17 +197,16 @@
 		8477D32C1B069EB400DBAEBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				842CF0F61B0BD47A00D77FAA /* Categories */,
 				8477D32D1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld */,
+				842CF0FD1B0BE24100D77FAA /* CardModel.h */,
+				842CF0FE1B0BE24100D77FAA /* CardModel.m */,
 				8477D33C1B06A58500DBAEBE /* PackModel.h */,
 				8477D33D1B06A58500DBAEBE /* PackModel.m */,
 				8477D3391B06A58500DBAEBE /* RarityModel.h */,
 				8477D33A1B06A58500DBAEBE /* RarityModel.m */,
-				8477D3361B06A58500DBAEBE /* QualityModel.h */,
-				8477D3371B06A58500DBAEBE /* QualityModel.m */,
 				8477D3331B06A58500DBAEBE /* AbstractModel.h */,
 				8477D3341B06A58500DBAEBE /* AbstractModel.m */,
-				8477D3301B06A58400DBAEBE /* CardModel.h */,
-				8477D3311B06A58400DBAEBE /* CardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,9 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8477D32B1B06985A00DBAEBE /* Card.m in Sources */,
-				8477D3321B06A58400DBAEBE /* CardModel.m in Sources */,
+				842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */,
 				8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */,
-				8477D3381B06A58500DBAEBE /* QualityModel.m in Sources */,
 				8477D32F1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld in Sources */,
 				8477D33B1B06A58500DBAEBE /* RarityModel.m in Sources */,
 				8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */,
@@ -369,6 +376,7 @@
 				8477D3411B06A70300DBAEBE /* Pack.m in Sources */,
 				8477D3231B06746500DBAEBE /* ViewController.m in Sources */,
 				8477D2FA1B06730000DBAEBE /* main.m in Sources */,
+				842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,9 @@
 #import "EntityManager.h"
 #import "CoreData+MagicalRecord.h"
 #import "RarityModel.h"
-#import "QualityModel.h"
+#import "CardModel+Addition.h"
 #import "PackModel.h"
+#import "UNIRest.h"
 
 @implementation EntityManager
 
@@ -29,47 +30,51 @@
 + (void)setRarityModelData {
     
     if ([RarityModel MR_findAll].count == 0) {
+        NSMutableArray *modelArray = [NSMutableArray new];
         for (NSString *item in [EntityManager getDataFromFile:@"Rarity"]) {
             RarityModel *model = [RarityModel MR_createEntity];
             model.rarityType = item;
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+            [modelArray addObject:model];            
         }
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         NSLog(@"=== All Rarity added ===");
-    }
-}
-
-+ (void)setQualityModelData {
-    if ([QualityModel MR_findAll].count == 0) {        
-        for (int i = 0; i < 2; i++) {
-            QualityModel *model = [QualityModel MR_createEntity];
-            model.golden = (i == 0 ? @NO : @YES);
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        }
-        NSLog(@"=== All Quality added ===");
     }
 }
 
 + (void)setPackModelData {
     if ([PackModel MR_findAll].count == 0) {
+        NSMutableArray *modelArray = [NSMutableArray new];
         for (NSString *item in [EntityManager getDataFromFile:@"Packs"]) {
             PackModel *model = [PackModel MR_createEntity];
             model.type = item;
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+            [modelArray addObject:model];
         }
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         NSLog(@"=== All Packs added ===");
     }
 }
 
-+ (void)setCardModelData {
-//    if ([PackModel MR_findAll].count == 0) {
-//        for (NSString *item in [EntityManager getDataFromFile:@"Packs"]) {
-//            PackModel *model = [PackModel MR_createEntity];
-//            model.type = item;
-//            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-//        }
-//        NSLog(@"=== All Cards added ===");
-//    }
++ (void)setCardModelData:(NSString *)pack {
+
+    NSDictionary *headers = @{@"X-Mashape-Key": @"tnrzpmUXIBmshaYtv8WUB2I9nbdXp1EKWmNjsnanl0mfqZQH07"};
+    
+    [[UNIRest get:^(UNISimpleRequest *request) {
+        [request setUrl:[NSString stringWithFormat:@"https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/%@?collectible=1", pack]];
+        [request setHeaders:headers];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
+        NSLog(@"=== Respose Code: %ld ===", (long)response.code);
+        
+        NSMutableArray *modelArray = [NSMutableArray new];
+        for (NSDictionary *item in response.body.array) {
+            CardModel *model = [CardModel checkForCard:item[@"cardId"]];
+            [model configureModel:item];
+            [modelArray addObject:model];
+        }
+        [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
+        NSLog(@"=== Cards added ===");
+    }];
 }
+
 
 
 @end

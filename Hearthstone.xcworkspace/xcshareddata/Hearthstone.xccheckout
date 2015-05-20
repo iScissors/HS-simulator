@@ -10,31 +10,31 @@
 	<string>Hearthstone</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</key>
-		<string>https://github.com/iScissors/Hearthstone.git</string>
+		<key>3ACF546B29D5A9FCA7A979C810EDA6A7C3FAEAF6</key>
+		<string>https://github.com/iScissors/HS-simulator.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Hearthstone/Hearthstone.xcworkspace</string>
+	<string>Hearthstone.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</key>
-		<string>../..</string>
+		<key>3ACF546B29D5A9FCA7A979C810EDA6A7C3FAEAF6</key>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/iScissors/Hearthstone.git</string>
+	<string>https://github.com/iScissors/HS-simulator.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</string>
+	<string>3ACF546B29D5A9FCA7A979C810EDA6A7C3FAEAF6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>08F09D4FCAF824AA8FBAF0C6834C80D1E44A59EB</string>
+			<string>3ACF546B29D5A9FCA7A979C810EDA6A7C3FAEAF6</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Hearthstone</string>
+			<string>HS-simulator</string>
 		</dict>
 	</array>
 </dict>

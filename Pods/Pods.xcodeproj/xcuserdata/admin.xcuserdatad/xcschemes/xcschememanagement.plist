@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Hearthstone-Unirest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Hearthstone.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6EB59F3CD4DB4E5CAB7571E7</key>
+		<key>4B024291945E8FD9D830463F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D7F9F3C520C0BD3FAF159275</key>
+		<key>66E2E4A8B413F7C3EC863AF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE113EA31204976B3DD66FA4</key>
+		<key>AC5E896AF54014CF12092AB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB89B85D7CCB4FC504DC8988</key>
 		<dict>
 			<key>primary</key>
 			<true/>

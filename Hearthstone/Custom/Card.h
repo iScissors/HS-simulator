@@ -8,21 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, rarity) {
-    common = 0,
-    rare,
-    epic,
-    legendary
-};
-
 @interface Card : UIButton
 
-@property (strong, nonatomic) NSString *frontImage;
-
-@property (nonatomic) NSInteger rariry;
-
-
 - (id)initWithBack:(NSString *)back;
+
+- (BOOL)rollRarity;
+
+- (void)rollCard;
 
 - (void)turnCard;
 

@@ -12,10 +12,8 @@
 
 + (void)setRarityModelData;
 
-+ (void)setQualityModelData;
-
 + (void)setPackModelData;
 
-+ (void)setCardModelData;
++ (void)setCardModelData:(NSString *)pack;
 
 @end

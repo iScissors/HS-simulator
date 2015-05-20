@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7F9F3C520C0BD3FAF159275"
+               BlueprintIdentifier = "AC5E896AF54014CF12092AB5"
                BuildableName = "libPods-Hearthstone.a"
                BlueprintName = "Pods-Hearthstone"
                ReferencedContainer = "container:Pods.xcodeproj">

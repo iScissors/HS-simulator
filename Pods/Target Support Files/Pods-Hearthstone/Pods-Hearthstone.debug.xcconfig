@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/UIView+Positioning"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MagicalRecord" -isystem "${PODS_ROOT}/Headers/Public/UIView+Positioning"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Hearthstone-MagicalRecord" -l"Pods-Hearthstone-UIView+Positioning" -framework "CoreData"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/UIView+Positioning" "${PODS_ROOT}/Headers/Public/Unirest" "${PODS_ROOT}/Headers/Public/Unirest/HttpRequest" "${PODS_ROOT}/Headers/Public/Unirest/HttpResponse"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MagicalRecord" -isystem "${PODS_ROOT}/Headers/Public/UIView+Positioning" -isystem "${PODS_ROOT}/Headers/Public/Unirest" -isystem "${PODS_ROOT}/Headers/Public/Unirest/HttpRequest" -isystem "${PODS_ROOT}/Headers/Public/Unirest/HttpResponse"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Hearthstone-MagicalRecord" -l"Pods-Hearthstone-UIView+Positioning" -l"Pods-Hearthstone-Unirest" -framework "CoreData"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods
