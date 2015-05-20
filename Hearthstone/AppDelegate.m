@@ -26,7 +26,7 @@
     
     // Request
     [EntityManager setCardModelData:@"Classic"];
-//    [EntityManager setCardModelData:@"Goblins vs Gnomes"];
+    [EntityManager setCardModelData:@"Goblins%20vs%20Gnomes"];
     
     return YES;
 }

@@ -31,6 +31,7 @@
 
 - (void)openPack {
     
+    NSLog(@"=== Opening begins ... ===");
     self.hidden = YES;
     NSArray *positions = @[[NSValue valueWithCGPoint:CGPointMake(295, 40)],
                            [NSValue valueWithCGPoint:CGPointMake(370, 85)],
