@@ -63,7 +63,6 @@
             self.x -= openedWidth / 2;
         }];
     }];
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"cardNotification" object:self];
 }
 

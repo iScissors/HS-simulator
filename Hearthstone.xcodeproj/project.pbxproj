@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */; };
 		842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0FE1B0BE24100D77FAA /* CardModel.m */; };
+		845048051B0D09B30086D3C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845048041B0D09B30086D3C5 /* ViewController.m */; };
+		845048081B0D09D10086D3C5 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845048071B0D09D10086D3C5 /* ShopViewController.m */; };
+		8450480B1B0D0A390086D3C5 /* ShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450480A1B0D0A390086D3C5 /* ShopView.m */; };
 		8477D2FA1B06730000DBAEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D2F91B06730000DBAEBE /* main.m */; };
 		8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D2FC1B06730000DBAEBE /* AppDelegate.m */; };
 		8477D3081B06730000DBAEBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3071B06730000DBAEBE /* Images.xcassets */; };
 		8477D3171B06730000DBAEBE /* HearthstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3161B06730000DBAEBE /* HearthstoneTests.m */; };
-		8477D3231B06746500DBAEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3221B06746500DBAEBE /* ViewController.m */; };
 		8477D3261B06748E00DBAEBE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3241B06748E00DBAEBE /* LaunchScreen.xib */; };
 		8477D3271B06748E00DBAEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3251B06748E00DBAEBE /* Main.storyboard */; };
 		8477D32B1B06985A00DBAEBE /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D32A1B06985A00DBAEBE /* Card.m */; };
@@ -43,6 +45,12 @@
 		842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CardModel+Addition.m"; sourceTree = "<group>"; };
 		842CF0FD1B0BE24100D77FAA /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
 		842CF0FE1B0BE24100D77FAA /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
+		845048031B0D09B30086D3C5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		845048041B0D09B30086D3C5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		845048061B0D09D10086D3C5 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		845048071B0D09D10086D3C5 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		845048091B0D0A390086D3C5 /* ShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopView.h; sourceTree = "<group>"; };
+		8450480A1B0D0A390086D3C5 /* ShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopView.m; sourceTree = "<group>"; };
 		8477D2F41B06730000DBAEBE /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477D2F81B06730000DBAEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8477D2F91B06730000DBAEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,8 +60,6 @@
 		8477D3101B06730000DBAEBE /* HearthstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearthstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477D3151B06730000DBAEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8477D3161B06730000DBAEBE /* HearthstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HearthstoneTests.m; sourceTree = "<group>"; };
-		8477D3211B06746500DBAEBE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8477D3221B06746500DBAEBE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8477D3241B06748E00DBAEBE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8477D3251B06748E00DBAEBE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8477D3291B06985A00DBAEBE /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
@@ -108,6 +114,17 @@
 				842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		845048021B0D09B30086D3C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				845048031B0D09B30086D3C5 /* ViewController.h */,
+				845048041B0D09B30086D3C5 /* ViewController.m */,
+				845048061B0D09D10086D3C5 /* ShopViewController.h */,
+				845048071B0D09D10086D3C5 /* ShopViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8477D2EB1B06730000DBAEBE = {
@@ -177,8 +194,7 @@
 			children = (
 				8477D3241B06748E00DBAEBE /* LaunchScreen.xib */,
 				8477D3251B06748E00DBAEBE /* Main.storyboard */,
-				8477D3211B06746500DBAEBE /* ViewController.h */,
-				8477D3221B06746500DBAEBE /* ViewController.m */,
+				845048021B0D09B30086D3C5 /* Controllers */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -190,6 +206,8 @@
 				8477D32A1B06985A00DBAEBE /* Card.m */,
 				8477D33F1B06A70300DBAEBE /* Pack.h */,
 				8477D3401B06A70300DBAEBE /* Pack.m */,
+				845048091B0D0A390086D3C5 /* ShopView.h */,
+				8450480A1B0D0A390086D3C5 /* ShopView.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -371,10 +389,12 @@
 				8477D32F1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld in Sources */,
 				8477D33B1B06A58500DBAEBE /* RarityModel.m in Sources */,
 				8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */,
+				845048051B0D09B30086D3C5 /* ViewController.m in Sources */,
 				8477D33E1B06A58500DBAEBE /* PackModel.m in Sources */,
+				8450480B1B0D0A390086D3C5 /* ShopView.m in Sources */,
 				8477D3351B06A58500DBAEBE /* AbstractModel.m in Sources */,
 				8477D3411B06A70300DBAEBE /* Pack.m in Sources */,
-				8477D3231B06746500DBAEBE /* ViewController.m in Sources */,
+				845048081B0D09D10086D3C5 /* ShopViewController.m in Sources */,
 				8477D2FA1B06730000DBAEBE /* main.m in Sources */,
 				842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */,
 			);

@@ -11,6 +11,7 @@
 #import "Card.h"
 #import "UIView+Positioning.h"
 #import "MagicalRecord.h"
+#import "ShopViewController.h"
 
 #define animation 0.3
 
@@ -50,15 +51,6 @@
     self.packIsActive = YES;
 }
 
-- (IBAction)resetPack:(id)sender {
-    
-    if (!self.packIsActive) {
-        [self.pack removeFromSuperview];
-        self.pack = nil;
-        [self createPack];
-    }
-}
-
 - (void)checkForLastCard {
     
     if (self.openedCards == 4) {
@@ -95,6 +87,17 @@
     doneButton = nil;
     self.packIsActive = NO;
     self.openedCards = 0;
+}
+
+#pragma mark View buttons
+
+- (IBAction)resetPack:(id)sender {
+    
+    if (!self.packIsActive) {
+        [self.pack removeFromSuperview];
+        self.pack = nil;
+        [self createPack];
+    }
 }
 
 @end
