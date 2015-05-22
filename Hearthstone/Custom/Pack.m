@@ -10,7 +10,7 @@
 #import "Card.h"
 #import "UIView+Positioning.h"
 
-#define closedWidth 66
+#define closedWidth 71
 #define closedHeight 93
 
 @implementation Pack
@@ -21,7 +21,8 @@
     if (self) {
         self = [Pack buttonWithType:UIButtonTypeCustom];
         self.size = CGSizeMake(closedWidth, closedHeight);
-        self.origin = CGPointMake(295, 110);
+        self.origin = CGPointMake(292, 113);
+        self.adjustsImageWhenHighlighted = NO;
         self.backgroundColor = [UIColor clearColor];
         [self setImage:[UIImage imageNamed:packType] forState:UIControlStateNormal];
         [self addTarget:self action:@selector(openPack) forControlEvents:UIControlEventTouchUpInside];

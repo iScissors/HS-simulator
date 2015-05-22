@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-VF-s0k" userLabel="Reset">
-                                <rect key="frame" x="447" y="295" width="49" height="21"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetPack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qH0-tD-gcV"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gvgBackgound" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-p0-tGN">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
@@ -34,7 +25,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aFv-YG-mL1" kind="presentation" modalPresentationStyle="overCurrentContext" id="Qxq-Ne-HVF"/>
+                                    <action selector="openShop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6iB-Dh-zbB"/>
+                                    <segue destination="aFv-YG-mL1" kind="presentation" modalPresentationStyle="overCurrentContext" id="P94-iE-8u2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-VF-s0k" userLabel="Reset">
+                                <rect key="frame" x="81" y="111" width="64" height="95"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qH0-tD-gcV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="319" y="190"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="D0T-ZT-5SN">
             <objects>
-                <viewController id="aFv-YG-mL1" sceneMemberID="viewController">
+                <viewController id="aFv-YG-mL1" customClass="ShopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dEE-jX-CVN"/>
                         <viewControllerLayoutGuide type="bottom" id="lBF-ge-8B7"/>
@@ -62,33 +63,64 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shopBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-CC-zte">
                                 <rect key="frame" x="133" y="48" width="303" height="223"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HH-bb-9F9">
-                                <rect key="frame" x="290" y="100" width="67" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-Cd-2Us" userLabel="GvGPack">
+                                <rect key="frame" x="285" y="100" width="75" height="101"/>
                                 <state key="normal" image="gvgGrey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPack:" destination="aFv-YG-mL1" eventType="touchUpInside" id="sns-wd-Onb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-sP-1Az">
-                                <rect key="frame" x="213" y="100" width="67" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Af-XX-kCq" userLabel="Next">
+                                <rect key="frame" x="257" y="250" width="51" height="18"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToMainView:" destination="aFv-YG-mL1" eventType="touchUpInside" id="od1-Bz-xid"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygy-Kn-wh3" userLabel="PacksButton">
+                                <rect key="frame" x="190" y="211" width="78" height="23"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eee-7U-MEq" userLabel="BacksButton">
+                                <rect key="frame" x="307" y="211" width="78" height="23"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-sP-1Az" userLabel="ClassicPack">
+                                <rect key="frame" x="209" y="100" width="75" height="101"/>
                                 <state key="normal" image="classicGrey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPack:" destination="aFv-YG-mL1" eventType="touchUpInside" id="w6s-3V-Rep"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="classicPack" destination="Cqd-sP-1Az" id="HUe-Q1-l3e"/>
+                        <outlet property="gvgPack" destination="0aT-Cd-2Us" id="U0O-Cs-VP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXQ-k9-kfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="642"/>
+            <point key="canvasLocation" x="319" y="612"/>
         </scene>
     </scenes>
     <resources>
-        <image name="classicGrey" width="184" height="274"/>
+        <image name="classicGrey" width="148" height="199"/>
         <image name="gvgBackgound" width="1920" height="1038"/>
-        <image name="gvgGrey" width="184" height="274"/>
+        <image name="gvgGrey" width="152" height="199"/>
         <image name="shopBackground" width="769" height="605"/>
     </resources>
 </document>

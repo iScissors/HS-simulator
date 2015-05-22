@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface ShopViewController : ViewController
+@interface ShopViewController : UIViewController
 
 @end

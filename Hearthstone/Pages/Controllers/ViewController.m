@@ -19,7 +19,7 @@
 
 @property (strong, nonatomic) Pack *pack;
 
-@property (nonatomic) BOOL packIsActive;
+@property (nonatomic) BOOL packIsActive;	
 
 @property (nonatomic) NSInteger openedCards;
 
@@ -35,10 +35,7 @@
     self.packIsActive = YES;
     [self createPack];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkForLastCard)
-                                                 name:@"cardNotification"
-                                               object:nil];
+    [self setNotificationCenter];
 }
 
 
@@ -98,6 +95,41 @@
         self.pack = nil;
         [self createPack];
     }
+}
+
+#pragma mark Support
+
+- (void)setNotificationCenter {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkForLastCard)
+                                                 name:@"cardNotification"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(dismissBlur)
+                                                 name:@"shopClose"
+                                               object:nil];
+}
+
+- (IBAction)openShop:(id)sender {
+    
+    UIView *alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+    alphaView.backgroundColor = [UIColor blackColor];
+    alphaView.alpha = 0;
+    [self.view addSubview:alphaView];
+    [UIView animateWithDuration:0.5 animations:^{
+        alphaView.alpha = 0.6;
+    }];
+}
+
+- (void)dismissBlur {
+    
+    UIView *alphaView = self.view.subviews.lastObject;
+    [UIView animateWithDuration:0.5 animations:^{
+        alphaView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [alphaView removeFromSuperview];
+    }];
 }
 
 @end
