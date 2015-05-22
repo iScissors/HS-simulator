@@ -33,7 +33,9 @@
 
 - (IBAction)returnToMainView:(id)sender {
     
-    self.delegate.packModel = self.packType;
+    if (self.packType)
+        self.delegate.packModel = self.packType;    
+    
     [self.delegate performSelector:@selector(dismissBlur)];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
