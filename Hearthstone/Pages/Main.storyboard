@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gvgBackgound" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-p0-tGN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="classicBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-p0-tGN" userLabel="mainBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzI-wp-VSn" userLabel="Shop">
@@ -26,11 +26,10 @@
                                 </state>
                                 <connections>
                                     <action selector="openShop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6iB-Dh-zbB"/>
-                                    <segue destination="aFv-YG-mL1" kind="presentation" modalPresentationStyle="overCurrentContext" id="P94-iE-8u2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-VF-s0k" userLabel="Reset">
-                                <rect key="frame" x="81" y="111" width="64" height="95"/>
+                                <rect key="frame" x="80" y="99" width="74" height="108"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,6 +42,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mainScreen" destination="QOT-p0-tGN" id="3Jk-Hq-9yK"/>
+                        <segue destination="aFv-YG-mL1" kind="presentation" identifier="ShopSegue" modalPresentationStyle="overCurrentContext" id="HJQ-yo-3yp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,8 +121,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="classicBackground" width="1920" height="1038"/>
         <image name="classicGrey" width="148" height="199"/>
-        <image name="gvgBackgound" width="1920" height="1038"/>
         <image name="gvgGrey" width="152" height="199"/>
         <image name="shopBackground" width="769" height="605"/>
     </resources>

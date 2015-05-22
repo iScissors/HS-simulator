@@ -10,12 +10,16 @@
 #import "Pack.h"
 #import "Card.h"
 #import "UIView+Positioning.h"
+#import "CoreData+MagicalRecord.h"
 #import "MagicalRecord.h"
 #import "ShopViewController.h"
 
+#define SegueName @"ShopSegue"
 #define animation 0.3
 
 @interface ViewController ()
+
+@property (strong, nonatomic) IBOutlet UIImageView *mainScreen;
 
 @property (strong, nonatomic) Pack *pack;
 
@@ -33,9 +37,13 @@
     
     [super viewDidLoad];
     self.packIsActive = YES;
+    self.packModel = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Classic"];
     [self createPack];
     
-    [self setNotificationCenter];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkForLastCard)
+                                                 name:@"cardNotification"
+                                               object:nil];
 }
 
 
@@ -43,7 +51,7 @@
 
 - (void)createPack {
     
-    self.pack = [[Pack alloc] initWithPack:@"gvgPack"];
+    self.pack = [[Pack alloc] initWithPack:self.packModel];
     [self.view addSubview:self.pack];
     self.packIsActive = YES;
 }
@@ -99,30 +107,34 @@
 
 #pragma mark Support
 
-- (void)setNotificationCenter {
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkForLastCard)
-                                                 name:@"cardNotification"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(dismissBlur)
-                                                 name:@"shopClose"
-                                               object:nil];
-}
 
 - (IBAction)openShop:(id)sender {
     
-    UIView *alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
-    alphaView.backgroundColor = [UIColor blackColor];
-    alphaView.alpha = 0;
-    [self.view addSubview:alphaView];
-    [UIView animateWithDuration:0.5 animations:^{
-        alphaView.alpha = 0.6;
-    }];
+    if (!self.packIsActive) {
+        UIView *alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+        alphaView.backgroundColor = [UIColor blackColor];
+        alphaView.alpha = 0;
+        [self.view addSubview:alphaView];
+        [UIView animateWithDuration:0.5 animations:^{
+            alphaView.alpha = 0.6;
+        }];
+        [self performSegueWithIdentifier:SegueName sender:self];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:SegueName]) {
+        ShopViewController *modalVC = [segue destinationViewController];
+        modalVC.delegate = self;
+    }
 }
 
 - (void)dismissBlur {
+    
+    if ([self.packModel.type isEqualToString:@"Classic"])
+        [self.mainScreen setImage:[UIImage imageNamed:@"classicBackground"]];
+    else
+        [self.mainScreen setImage:[UIImage imageNamed:@"gvgBackground"]];
     
     UIView *alphaView = self.view.subviews.lastObject;
     [UIView animateWithDuration:0.5 animations:^{

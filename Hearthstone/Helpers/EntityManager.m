@@ -43,11 +43,15 @@
 
 + (void)setPackModelData {
     if ([PackModel MR_findAll].count == 0) {
+        NSArray *images = @[@"classicPack", @"gvgPack"];
         NSMutableArray *modelArray = [NSMutableArray new];
+        int i = 0;
         for (NSString *item in [EntityManager getDataFromFile:@"Packs"]) {
             PackModel *model = [PackModel MR_createEntity];
             model.type = item;
+            model.imageName = images[i];
             [modelArray addObject:model];
+            i++;
         }
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         NSLog(@"=== All Packs added ===");

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PackModel.h"
+
 
 @interface Card : UIButton
 
@@ -14,7 +16,7 @@
 
 - (BOOL)rollRarity;
 
-- (void)rollCard;
+- (void)rollCard:(PackModel *)packType;
 
 - (void)turnCard;
 

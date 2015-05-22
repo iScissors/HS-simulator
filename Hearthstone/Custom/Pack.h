@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PackModel.h"
 
 @interface Pack : UIButton
 
-- (id)initWithPack:(NSString *)packType;
+- (id)initWithPack:(PackModel *)pack;
 
 @end

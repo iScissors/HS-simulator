@@ -66,10 +66,11 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"cardNotification" object:self];
 }
 
-- (void)rollCard {
-    
+- (void)rollCard:(PackModel *)packType {
+   
     RarityModel *rarity = [RarityModel MR_findFirstByAttribute:@"rarityType" withValue:self.rarity];
-    NSArray *cardsArray = [rarity.cards allObjects];
+    NSArray *cardsArray = [CardModel MR_findAllWithPredicate:
+                           [NSPredicate predicateWithFormat:@"packType == %@ AND rarity == %@", packType, rarity]];
     CardModel *card = [cardsArray objectAtIndex:arc4random_uniform((uint)cardsArray.count)];
     
     // Image request

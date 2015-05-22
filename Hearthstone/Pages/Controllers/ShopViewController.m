@@ -8,12 +8,15 @@
 
 #import "ShopViewController.h"
 #import "UIView+Positioning.h"
+#import "CoreData+MagicalRecord.h"
 
 @interface ShopViewController()
 
 @property (weak, nonatomic) IBOutlet UIButton *classicPack;
 
 @property (weak, nonatomic) IBOutlet UIButton *gvgPack;
+
+@property (strong, nonatomic) PackModel *packType;
 
 @end
 
@@ -30,7 +33,8 @@
 
 - (IBAction)returnToMainView:(id)sender {
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"shopClose" object:self];
+    self.delegate.packModel = self.packType;
+    [self.delegate performSelector:@selector(dismissBlur)];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -39,17 +43,18 @@
 - (IBAction)selectPack:(id)sender {
     
     if ([sender isEqual:self.classicPack]) {
+        self.packType = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Classic"];
         [self.classicPack setSelected:YES];
         self.classicPack.userInteractionEnabled = NO;
         [self.gvgPack setSelected:NO];
         self.gvgPack.userInteractionEnabled = YES;
     }
     else {
+        self.packType = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Goblins vs Gnomes"];
         [self.classicPack setSelected:NO];
         self.classicPack.userInteractionEnabled = YES;
         [self.gvgPack setSelected:YES];
         self.gvgPack.userInteractionEnabled = NO;
-        
     }
 }
 

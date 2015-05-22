@@ -2,19 +2,19 @@
 //  PackModel.h
 //  Hearthstone
 //
-//  Created by Admin on 0516//15.
+//  Created by Grachev Yaroslav on 05/22/15.
 //  Copyright (c) 2015 Grachev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "AbstractModel.h"
 
 @class CardModel;
 
-@interface PackModel : AbstractModel
+@interface PackModel : NSManagedObject
 
 @property (nonatomic, retain) NSString * type;
+@property (nonatomic, retain) NSString * imageName;
 @property (nonatomic, retain) NSSet *cards;
 @end
 

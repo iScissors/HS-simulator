@@ -13,18 +13,25 @@
 #define closedWidth 71
 #define closedHeight 93
 
+@interface Pack()
+
+@property (weak, nonatomic) PackModel *packModel;
+
+@end
+
 @implementation Pack
 
 
-- (id)initWithPack:(NSString *)packType {
+- (id)initWithPack:(PackModel *)pack {
     self = [super init];
     if (self) {
         self = [Pack buttonWithType:UIButtonTypeCustom];
+        self.packModel = pack;
         self.size = CGSizeMake(closedWidth, closedHeight);
         self.origin = CGPointMake(292, 113);
         self.adjustsImageWhenHighlighted = NO;
         self.backgroundColor = [UIColor clearColor];
-        [self setImage:[UIImage imageNamed:packType] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:pack.imageName] forState:UIControlStateNormal];
         [self addTarget:self action:@selector(openPack) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
@@ -51,7 +58,7 @@
         while (!anyRare && i == 4) {
             anyRare = [card rollRarity];
         }
-        [card rollCard];
+        [card rollCard:self.packModel];
     }
 }
 

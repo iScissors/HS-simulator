@@ -9,6 +9,7 @@
         <relationship name="rarity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RarityModel" inverseName="cards" inverseEntity="RarityModel" syncable="YES"/>
     </entity>
     <entity name="PackModel" representedClassName="PackModel" syncable="YES">
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="packType" inverseEntity="CardModel" syncable="YES"/>
     </entity>
@@ -18,7 +19,7 @@
     </entity>
     <elements>
         <element name="CardModel" positionX="-36" positionY="9" width="128" height="133"/>
-        <element name="PackModel" positionX="0" positionY="63" width="128" height="73"/>
+        <element name="PackModel" positionX="0" positionY="63" width="128" height="88"/>
         <element name="RarityModel" positionX="-54" positionY="0" width="128" height="73"/>
     </elements>
 </model>

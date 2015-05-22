@@ -30,7 +30,7 @@
     self.rarity = (!self.rarity ? [RarityModel MR_findFirstWithPredicate:
                                    [NSPredicate predicateWithFormat:@"self.rarityType == %@", data[@"rarity"]]] : self.rarity);
     self.packType = (!self.packType ? [PackModel MR_findFirstWithPredicate:
-                                   [NSPredicate predicateWithFormat:@"self.type == %@", data[@"rarity"]]] : self.packType);
+                                   [NSPredicate predicateWithFormat:@"self.type == %@", data[@"cardSet"]]] : self.packType);
 
     self.image = data[@"img"];
     self.imageGolden = data[@"imgGold"];

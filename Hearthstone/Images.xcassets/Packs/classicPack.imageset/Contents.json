@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "GvGBackground.png"
+      "filename" : "classicPack.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "GvGBackground-1.png"
+      "filename" : "classicPack-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "GvGBackground-2.png"
+      "filename" : "classicPack-2.png"
     }
   ],
   "info" : {
