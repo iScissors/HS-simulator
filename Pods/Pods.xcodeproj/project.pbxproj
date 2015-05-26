@@ -802,7 +802,6 @@
 		};
 		24AFE65AA60823165B5A04B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40599B9DD34E1A6ED34985D8 /* Pods-Hearthstone-Unirest-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-Unirest/Pods-Hearthstone-Unirest-prefix.pch";
@@ -818,7 +817,6 @@
 		};
 		303C4B24CC3EDF05E520BD8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40599B9DD34E1A6ED34985D8 /* Pods-Hearthstone-Unirest-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-Unirest/Pods-Hearthstone-Unirest-prefix.pch";
@@ -834,7 +832,6 @@
 		};
 		3AE97D4995296DD9B59A9CBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E95322D932566FB21913FFD0 /* Pods-Hearthstone.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -889,7 +886,6 @@
 		};
 		590C99AFF7F6309933D36C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A879EB902B4FEF73C1C06976 /* Pods-Hearthstone-UIView+Positioning-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-UIView+Positioning/Pods-Hearthstone-UIView+Positioning-prefix.pch";
@@ -905,7 +901,6 @@
 		};
 		619F0FB3C341B38A11983F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38346E79F2EE5C59EFF5566C /* Pods-Hearthstone.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -921,7 +916,6 @@
 		};
 		72AADE9FEFC3A98AE2BE0920 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A7A816DE8C632A2445F6431 /* Pods-Hearthstone-MagicalRecord-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-MagicalRecord/Pods-Hearthstone-MagicalRecord-prefix.pch";
@@ -937,7 +931,6 @@
 		};
 		BAFA2B9F7A607C1FAFC5C884 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A7A816DE8C632A2445F6431 /* Pods-Hearthstone-MagicalRecord-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-MagicalRecord/Pods-Hearthstone-MagicalRecord-prefix.pch";
@@ -953,7 +946,6 @@
 		};
 		F52CC91A70AF711CF62DCEDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A879EB902B4FEF73C1C06976 /* Pods-Hearthstone-UIView+Positioning-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hearthstone-UIView+Positioning/Pods-Hearthstone-UIView+Positioning-prefix.pch";

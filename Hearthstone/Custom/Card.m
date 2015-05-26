@@ -12,9 +12,10 @@
 #import "CoreData+MagicalRecord.h"
 #import "UIView+Positioning.h"
 #import "UNIRest.h"
+#import "UIImage+animatedGIF.h"
 
 #define closedWidth 66
-#define openedWidth 78
+#define openedWidth 80
 #define closedHeight 93
 
 @interface Card()
@@ -76,9 +77,12 @@
     // Image request
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", (self.isGolden ? card.imageGolden : card.image)]];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        self.frontImage = [UIImage imageWithData:data];
-        
+        if (self.isGolden)
+            self.frontImage = [UIImage animatedImageWithAnimatedGIFURL:url];
+        else {
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            self.frontImage = [UIImage imageWithData:data];
+        }
         NSLog(@"=== Card image loaded ===");
     });
 }

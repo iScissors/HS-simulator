@@ -1,0 +1,6 @@
+#include "Pods-Hearthstone-Unirest.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Unirest" "${PODS_ROOT}/Headers/Private/Unirest/HttpRequest" "${PODS_ROOT}/Headers/Private/Unirest/HttpResponse" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/UIView+Positioning" "${PODS_ROOT}/Headers/Public/Unirest" "${PODS_ROOT}/Headers/Public/Unirest/HttpRequest" "${PODS_ROOT}/Headers/Public/Unirest/HttpResponse"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

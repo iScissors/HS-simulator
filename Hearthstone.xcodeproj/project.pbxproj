@@ -25,6 +25,7 @@
 		8477D3431B08C8E800DBAEBE /* MR data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3421B08C8E800DBAEBE /* MR data.bundle */; };
 		8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3491B0940A100DBAEBE /* EntityManager.m */; };
 		84A158511B0FC53300D72C7B /* PackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A158501B0FC53300D72C7B /* PackModel.m */; };
+		84A159711B15058B00D72C7B /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A159701B15058B00D72C7B /* UIImage+animatedGIF.m */; };
 		BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		8477D3491B0940A100DBAEBE /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
 		84A1584F1B0FC53300D72C7B /* PackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackModel.h; sourceTree = "<group>"; };
 		84A158501B0FC53300D72C7B /* PackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackModel.m; sourceTree = "<group>"; };
+		84A1596F1B15058B00D72C7B /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		84A159701B15058B00D72C7B /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332B28F6A12612777944B96 /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +202,7 @@
 		8477D3281B0674CA00DBAEBE /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				84A1596E1B15058B00D72C7B /* GIF category */,
 				8477D3291B06985A00DBAEBE /* Card.h */,
 				8477D32A1B06985A00DBAEBE /* Card.m */,
 				8477D33F1B06A70300DBAEBE /* Pack.h */,
@@ -231,6 +235,15 @@
 				8477D3491B0940A100DBAEBE /* EntityManager.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84A1596E1B15058B00D72C7B /* GIF category */ = {
+			isa = PBXGroup;
+			children = (
+				84A1596F1B15058B00D72C7B /* UIImage+animatedGIF.h */,
+				84A159701B15058B00D72C7B /* UIImage+animatedGIF.m */,
+			);
+			path = "GIF category";
 			sourceTree = "<group>";
 		};
 		E9D5CBECB159D47912DDA64B /* Pods */ = {
@@ -391,6 +404,7 @@
 				845048081B0D09D10086D3C5 /* ShopViewController.m in Sources */,
 				8477D2FA1B06730000DBAEBE /* main.m in Sources */,
 				842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */,
+				84A159711B15058B00D72C7B /* UIImage+animatedGIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

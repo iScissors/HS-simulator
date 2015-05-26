@@ -36,9 +36,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.packIsActive = YES;
-    self.packModel = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Classic"];
-    [self createPack];
+    self.packIsActive = NO;
+//    self.packModel = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Classic"];
+//    [self createPack];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(checkForLastCard)
@@ -51,9 +51,11 @@
 
 - (void)createPack {
     
-    self.pack = [[Pack alloc] initWithPack:self.packModel];
-    [self.view addSubview:self.pack];
-    self.packIsActive = YES;
+    if (!self.packIsActive) {
+        self.pack = [[Pack alloc] initWithPack:self.packModel];
+        [self.view addSubview:self.pack];
+        self.packIsActive = YES;
+    }
 }
 
 - (void)checkForLastCard {
@@ -98,7 +100,7 @@
 
 - (IBAction)resetPack:(id)sender {
     
-    if (!self.packIsActive) {
+    if (!self.packIsActive && self.packModel != nil) {
         [self.pack removeFromSuperview];
         self.pack = nil;
         [self createPack];
@@ -133,7 +135,8 @@
     
     if ([self.packModel.type isEqualToString:@"Classic"])
         [self.mainScreen setImage:[UIImage imageNamed:@"classicBackground"]];
-    else
+    
+    if ([self.packModel.type isEqualToString:@"Goblins vs Gnomes"])
         [self.mainScreen setImage:[UIImage imageNamed:@"gvgBackground"]];
     
     UIView *alphaView = self.view.subviews.lastObject;
