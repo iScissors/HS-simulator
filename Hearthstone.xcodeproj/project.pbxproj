@@ -22,10 +22,13 @@
 		8477D3351B06A58500DBAEBE /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3341B06A58500DBAEBE /* AbstractModel.m */; };
 		8477D33B1B06A58500DBAEBE /* RarityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D33A1B06A58500DBAEBE /* RarityModel.m */; };
 		8477D3411B06A70300DBAEBE /* Pack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3401B06A70300DBAEBE /* Pack.m */; };
-		8477D3431B08C8E800DBAEBE /* MR data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8477D3421B08C8E800DBAEBE /* MR data.bundle */; };
 		8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D3491B0940A100DBAEBE /* EntityManager.m */; };
 		84A158511B0FC53300D72C7B /* PackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A158501B0FC53300D72C7B /* PackModel.m */; };
 		84A159711B15058B00D72C7B /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A159701B15058B00D72C7B /* UIImage+animatedGIF.m */; };
+		84A159731B151B2300D72C7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A159721B151B2300D72C7B /* AVFoundation.framework */; };
+		84A159751B15DA3500D72C7B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A159741B15DA3500D72C7B /* AudioToolbox.framework */; };
+		84A159791B15E58C00D72C7B /* MR data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84A159781B15E58C00D72C7B /* MR data.bundle */; };
+		84C2A4CB1B164FC60097043E /* StatsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4CA1B164FC60097043E /* StatsHelper.m */; };
 		BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */; };
 /* End PBXBuildFile section */
 
@@ -69,13 +72,17 @@
 		8477D33A1B06A58500DBAEBE /* RarityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityModel.m; sourceTree = "<group>"; };
 		8477D33F1B06A70300DBAEBE /* Pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pack.h; sourceTree = "<group>"; };
 		8477D3401B06A70300DBAEBE /* Pack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pack.m; sourceTree = "<group>"; };
-		8477D3421B08C8E800DBAEBE /* MR data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MR data.bundle"; sourceTree = SOURCE_ROOT; };
 		8477D3481B0940A100DBAEBE /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
 		8477D3491B0940A100DBAEBE /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
 		84A1584F1B0FC53300D72C7B /* PackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackModel.h; sourceTree = "<group>"; };
 		84A158501B0FC53300D72C7B /* PackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackModel.m; sourceTree = "<group>"; };
 		84A1596F1B15058B00D72C7B /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		84A159701B15058B00D72C7B /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		84A159721B151B2300D72C7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		84A159741B15DA3500D72C7B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84A159781B15E58C00D72C7B /* MR data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MR data.bundle"; sourceTree = SOURCE_ROOT; };
+		84C2A4C91B164FC60097043E /* StatsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsHelper.h; sourceTree = "<group>"; };
+		84C2A4CA1B164FC60097043E /* StatsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsHelper.m; sourceTree = "<group>"; };
 		8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332B28F6A12612777944B96 /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A159751B15DA3500D72C7B /* AudioToolbox.framework in Frameworks */,
+				84A159731B151B2300D72C7B /* AVFoundation.framework in Frameworks */,
 				BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +111,8 @@
 		4A868B93CCC2D635F78BC8DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A159741B15DA3500D72C7B /* AudioToolbox.framework */,
+				84A159721B151B2300D72C7B /* AVFoundation.framework */,
 				8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */,
 			);
 			name = Frameworks;
@@ -164,8 +175,8 @@
 		8477D2F71B06730000DBAEBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84A159781B15E58C00D72C7B /* MR data.bundle */,
 				8477D3071B06730000DBAEBE /* Images.xcassets */,
-				8477D3421B08C8E800DBAEBE /* MR data.bundle */,
 				8477D2F81B06730000DBAEBE /* Info.plist */,
 				8477D2F91B06730000DBAEBE /* main.m */,
 			);
@@ -233,6 +244,8 @@
 			children = (
 				8477D3481B0940A100DBAEBE /* EntityManager.h */,
 				8477D3491B0940A100DBAEBE /* EntityManager.m */,
+				84C2A4C91B164FC60097043E /* StatsHelper.h */,
+				84C2A4CA1B164FC60097043E /* StatsHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -340,7 +353,7 @@
 				8477D3271B06748E00DBAEBE /* Main.storyboard in Resources */,
 				8477D3261B06748E00DBAEBE /* LaunchScreen.xib in Resources */,
 				8477D3081B06730000DBAEBE /* Images.xcassets in Resources */,
-				8477D3431B08C8E800DBAEBE /* MR data.bundle in Resources */,
+				84A159791B15E58C00D72C7B /* MR data.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +407,7 @@
 				8477D32B1B06985A00DBAEBE /* Card.m in Sources */,
 				842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */,
 				8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */,
+				84C2A4CB1B164FC60097043E /* StatsHelper.m in Sources */,
 				8477D32F1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld in Sources */,
 				8477D33B1B06A58500DBAEBE /* RarityModel.m in Sources */,
 				8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */,

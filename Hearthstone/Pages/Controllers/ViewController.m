@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Pack.h"
 #import "Card.h"
+#import "StatsHelper.h"
 #import "UIView+Positioning.h"
 #import "CoreData+MagicalRecord.h"
 #import "MagicalRecord.h"
@@ -19,7 +20,7 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UIImageView *mainScreen;
+@property (weak, nonatomic) IBOutlet UIImageView *mainScreen;
 
 @property (strong, nonatomic) Pack *pack;
 
@@ -37,15 +38,14 @@
     
     [super viewDidLoad];
     self.packIsActive = NO;
-//    self.packModel = [PackModel MR_findFirstByAttribute:@"type" withValue:@"Classic"];
-//    [self createPack];
+    
+    [StatsHelper configureStatMenu:self.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(checkForLastCard)
                                                  name:@"cardNotification"
                                                object:nil];
 }
-
 
 #pragma mark Game logic
 
@@ -98,6 +98,11 @@
 
 #pragma mark View buttons
 
+- (void)openStatView {
+    
+    
+}
+
 - (IBAction)resetPack:(id)sender {
     
     if (!self.packIsActive && self.packModel != nil) {
@@ -106,9 +111,6 @@
         [self createPack];
     }
 }
-
-#pragma mark Support
-
 
 - (IBAction)openShop:(id)sender {
     
@@ -123,6 +125,8 @@
         [self performSegueWithIdentifier:SegueName sender:self];
     }
 }
+
+#pragma mark Support
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:SegueName]) {
@@ -146,5 +150,6 @@
         [alphaView removeFromSuperview];
     }];
 }
+
 
 @end

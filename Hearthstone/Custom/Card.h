@@ -18,6 +18,8 @@
 
 - (void)rollCard:(PackModel *)packType;
 
+- (void)startFloating;
+
 - (void)turnCard;
 
 @end
