@@ -103,7 +103,7 @@
     });
 }
 
-- (void)startFloating; {
+- (void)startFloating {
     
     [UIView animateKeyframesWithDuration:3 delay:0
                                  options:UIViewKeyframeAnimationOptionRepeat | UIViewKeyframeAnimationOptionAutoreverse

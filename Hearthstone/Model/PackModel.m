@@ -2,7 +2,7 @@
 //  PackModel.m
 //  Hearthstone
 //
-//  Created by Grachev Yaroslav on 05/22/15.
+//  Created by Grachev Yaroslav on 05/28/15.
 //  Copyright (c) 2015 Grachev. All rights reserved.
 //
 
@@ -12,8 +12,8 @@
 
 @implementation PackModel
 
-@dynamic type;
 @dynamic imageName;
+@dynamic type;
 @dynamic cards;
 
 @end

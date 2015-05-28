@@ -10,8 +10,8 @@
 
 @interface StatsHelper : NSObject
 
-+ (void)configureStatMenu:(UIView *)view;
+- (id)initWithView:(UIView *)view;
 
-+ (void)toggleContent;
+- (void)toggleContent;
 
 @end

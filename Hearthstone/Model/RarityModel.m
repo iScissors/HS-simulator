@@ -2,7 +2,7 @@
 //  RarityModel.m
 //  Hearthstone
 //
-//  Created by Admin on 0516//15.
+//  Created by Grachev Yaroslav on 05/28/15.
 //  Copyright (c) 2015 Grachev. All rights reserved.
 //
 

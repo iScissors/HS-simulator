@@ -28,6 +28,8 @@
 
 @property (nonatomic) NSInteger openedCards;
 
+@property (nonatomic) StatsHelper *statsHelper;
+
 @end
 
 @implementation ViewController
@@ -39,7 +41,7 @@
     [super viewDidLoad];
     self.packIsActive = NO;
     
-    [StatsHelper configureStatMenu:self.view];
+    self.statsHelper = [[StatsHelper alloc] initWithView:self.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(checkForLastCard)
@@ -97,11 +99,6 @@
 }
 
 #pragma mark View buttons
-
-- (void)openStatView {
-    
-    
-}
 
 - (IBAction)resetPack:(id)sender {
     

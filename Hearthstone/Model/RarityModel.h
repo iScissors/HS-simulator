@@ -2,17 +2,16 @@
 //  RarityModel.h
 //  Hearthstone
 //
-//  Created by Admin on 0516//15.
+//  Created by Grachev Yaroslav on 05/28/15.
 //  Copyright (c) 2015 Grachev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "AbstractModel.h"
 
 @class CardModel;
 
-@interface RarityModel : AbstractModel
+@interface RarityModel : NSManagedObject
 
 @property (nonatomic, retain) NSString * rarityType;
 @property (nonatomic, retain) NSSet *cards;
