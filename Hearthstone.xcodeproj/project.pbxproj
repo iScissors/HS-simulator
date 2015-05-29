@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		842CF0F91B0BD47A00D77FAA /* CardModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */; };
-		842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CF0FE1B0BE24100D77FAA /* CardModel.m */; };
 		845048051B0D09B30086D3C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845048041B0D09B30086D3C5 /* ViewController.m */; };
 		845048081B0D09D10086D3C5 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845048071B0D09D10086D3C5 /* ShopViewController.m */; };
 		8477D2FA1B06730000DBAEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477D2F91B06730000DBAEBE /* main.m */; };
@@ -29,6 +28,9 @@
 		84C2A4CE1B1687720097043E /* PackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4CD1B1687720097043E /* PackModel.m */; };
 		84C2A4D11B1687720097043E /* RarityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4D01B1687720097043E /* RarityModel.m */; };
 		84FC7DBF1B1889C100BD3E08 /* Belwe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FC7DBE1B1889C100BD3E08 /* Belwe-Bold.ttf */; };
+		84FC7DC21B18F85A00BD3E08 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC11B18F85A00BD3E08 /* UserModel.m */; };
+		84FC7DC51B18F85A00BD3E08 /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC41B18F85A00BD3E08 /* CardModel.m */; };
+		84FC7DC81B190C7500BD3E08 /* UserModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */; };
 		BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +48,6 @@
 		6D05708BB9E878A54985D4F7 /* Pods-Hearthstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.debug.xcconfig"; sourceTree = "<group>"; };
 		842CF0F71B0BD47A00D77FAA /* CardModel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CardModel+Addition.h"; sourceTree = "<group>"; };
 		842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CardModel+Addition.m"; sourceTree = "<group>"; };
-		842CF0FD1B0BE24100D77FAA /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
-		842CF0FE1B0BE24100D77FAA /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
 		845048031B0D09B30086D3C5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		845048041B0D09B30086D3C5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		845048061B0D09D10086D3C5 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
@@ -82,6 +82,12 @@
 		84C2A4CF1B1687720097043E /* RarityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityModel.h; sourceTree = "<group>"; };
 		84C2A4D01B1687720097043E /* RarityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityModel.m; sourceTree = "<group>"; };
 		84FC7DBE1B1889C100BD3E08 /* Belwe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Belwe-Bold.ttf"; sourceTree = "<group>"; };
+		84FC7DC01B18F85A00BD3E08 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		84FC7DC11B18F85A00BD3E08 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		84FC7DC31B18F85A00BD3E08 /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
+		84FC7DC41B18F85A00BD3E08 /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
+		84FC7DC61B190C7500BD3E08 /* UserModel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserModel+Addition.h"; sourceTree = "<group>"; };
+		84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserModel+Addition.m"; sourceTree = "<group>"; };
 		8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332B28F6A12612777944B96 /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,8 @@
 			children = (
 				842CF0F71B0BD47A00D77FAA /* CardModel+Addition.h */,
 				842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */,
+				84FC7DC61B190C7500BD3E08 /* UserModel+Addition.h */,
+				84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -227,12 +235,14 @@
 			children = (
 				842CF0F61B0BD47A00D77FAA /* Categories */,
 				8477D32D1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld */,
+				84FC7DC31B18F85A00BD3E08 /* CardModel.h */,
+				84FC7DC41B18F85A00BD3E08 /* CardModel.m */,
+				84FC7DC01B18F85A00BD3E08 /* UserModel.h */,
+				84FC7DC11B18F85A00BD3E08 /* UserModel.m */,
 				84C2A4CF1B1687720097043E /* RarityModel.h */,
 				84C2A4D01B1687720097043E /* RarityModel.m */,
 				84C2A4CC1B1687720097043E /* PackModel.h */,
 				84C2A4CD1B1687720097043E /* PackModel.m */,
-				842CF0FD1B0BE24100D77FAA /* CardModel.h */,
-				842CF0FE1B0BE24100D77FAA /* CardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,10 +414,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8477D32B1B06985A00DBAEBE /* Card.m in Sources */,
-				842CF0FF1B0BE24100D77FAA /* CardModel.m in Sources */,
 				8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */,
+				84FC7DC21B18F85A00BD3E08 /* UserModel.m in Sources */,
 				84C2A4CB1B164FC60097043E /* StatsHelper.m in Sources */,
+				84FC7DC51B18F85A00BD3E08 /* CardModel.m in Sources */,
 				84C2A4D11B1687720097043E /* RarityModel.m in Sources */,
+				84FC7DC81B190C7500BD3E08 /* UserModel+Addition.m in Sources */,
 				8477D32F1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld in Sources */,
 				8477D34A1B0940A100DBAEBE /* EntityManager.m in Sources */,
 				84C2A4CE1B1687720097043E /* PackModel.m in Sources */,

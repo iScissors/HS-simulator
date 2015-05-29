@@ -11,6 +11,7 @@
 #import "RarityModel.h"
 #import "CardModel+Addition.h"
 #import "PackModel.h"
+#import "UserModel.h"
 #import "UNIRest.h"
 
 @implementation EntityManager
@@ -79,6 +80,36 @@
     }];
 }
 
++ (void)setUserModel {
+    
+    if (![UserModel MR_findFirst]) {
+        [UserModel MR_createEntity];
+        [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
+    }
+}
 
++ (void)resetUserStats {
+    
+    UserModel *user = [UserModel MR_findFirst];
+    user.commonCount =
+    user.rareCount =
+    user.epicCount =
+    user.legendaryCount =
+    user.commonGoldCount =
+    user.rareGoldCount =
+    user.epicGoldCount =
+    user.legendaryGoldCount = 0;
+    for (CardModel *card in user.cards) {
+        card.ownedAmount = 0;
+        [user removeCardsObject:card];
+    }
+    [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
+}
+
+#pragma mark Support
+
++ (void)saveAllData {
+    [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
+}
 
 @end

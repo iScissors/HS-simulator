@@ -5,8 +5,10 @@
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageGolden" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownedAmount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="packType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PackModel" inverseName="cards" inverseEntity="PackModel" syncable="YES"/>
         <relationship name="rarity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RarityModel" inverseName="cards" inverseEntity="RarityModel" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserModel" inverseName="cards" inverseEntity="UserModel" syncable="YES"/>
     </entity>
     <entity name="PackModel" representedClassName="PackModel" syncable="YES">
         <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,9 +19,22 @@
         <attribute name="rarityType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="rarity" inverseEntity="CardModel" syncable="YES"/>
     </entity>
+    <entity name="UserModel" representedClassName="UserModel" syncable="YES">
+        <attribute name="commonCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="commonGoldCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="epicCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="epicGoldCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="legendaryCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="legendaryGoldCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="openedPacks" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rareCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rareGoldCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardModel" inverseName="user" inverseEntity="CardModel" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="CardModel" positionX="-36" positionY="9" width="128" height="133"/>
+        <element name="CardModel" positionX="-36" positionY="9" width="128" height="163"/>
         <element name="PackModel" positionX="0" positionY="63" width="128" height="88"/>
         <element name="RarityModel" positionX="-54" positionY="0" width="128" height="73"/>
+        <element name="UserModel" positionX="-27" positionY="63" width="128" height="193"/>
     </elements>
 </model>

@@ -14,9 +14,9 @@
 #import "CoreData+MagicalRecord.h"
 #import "MagicalRecord.h"
 #import "ShopViewController.h"
+#import "EntityManager.h"
 
 #define SegueName @"ShopSegue"
-#define animation 0.3
 
 @interface ViewController ()
 
@@ -78,6 +78,7 @@
 
 - (void)pressDone {
     
+    [EntityManager saveAllData];
     for (UIView *view in self.view.subviews) {
         if ([view isKindOfClass:[Card class]]) {
             [UIView animateWithDuration:0.3 animations:^{

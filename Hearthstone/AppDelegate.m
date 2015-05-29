@@ -23,6 +23,7 @@
     
     [EntityManager setRarityModelData];
     [EntityManager setPackModelData];
+    [EntityManager setUserModel];
     
     // Request
     [EntityManager setCardModelData:@"Classic"];

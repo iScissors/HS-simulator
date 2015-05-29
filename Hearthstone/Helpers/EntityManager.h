@@ -16,4 +16,10 @@
 
 + (void)setCardModelData:(NSString *)pack;
 
++ (void)setUserModel;
+
++ (void)resetUserStats;
+
++ (void)saveAllData;
+
 @end

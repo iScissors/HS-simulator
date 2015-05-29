@@ -8,9 +8,10 @@
 
 #import "StatsHelper.h"
 #import "Card.h"
+#import "CardModel.h"
 #import "UIView+Positioning.h"
 #import "CoreData+MagicalRecord.h"
-#import "CardModel.h"
+#import "UserModel+Addition.h"
 
 @interface StatsHelper()
 
@@ -86,7 +87,8 @@
     content.y = -content.height;
     content.image = [UIImage imageNamed:@"paperBackground"];
     
-    self.packLabel = [self createContLabel:CGRectMake(55, 43, 30, 10)];
+    self.packLabel = [self createContentLabel:CGRectMake(57, 43, 30, 10)
+                                    forRarity:nil];
     [content addSubview:self.packLabel];
     
     self.labelsArray = @[[@{@"rarity": @"Common", @"label": @""} mutableCopy],
@@ -96,12 +98,32 @@
     
     NSInteger space = 16;
     for (int i = 1; i < 5; i++) {
-        UILabel *label = [self createContLabel:CGRectMake(75, 39 + i * space, 30, 10)];
+        UILabel *label = [self createContentLabel:CGRectMake(77, 39 + i * space, 30, 10)
+                                        forRarity:self.labelsArray[i-1][@"rarity"]];
         [content addSubview:label];
         [self.labelsArray[i-1] setObject:label forKey:@"label"];
     }
     
     return content;
+}
+
+- (UILabel *)createContentLabel:(CGRect)rect forRarity:(NSString *)rarity {
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:rect];
+    [label setFont:[UIFont fontWithName:@"Belwe-Bold" size:9]];
+    [label setTextAlignment:NSTextAlignmentLeft];
+    label.textColor = [UIColor blackColor];
+    
+    UserModel *user = [UserModel MR_findFirst];
+    if (rarity == nil) {
+        [label setText:[NSString stringWithFormat:@"%@", user.openedPacks]];
+        return label;
+    }
+    else {
+        NSDictionary *dict = [UserModel getPropertiesByRarity:rarity];
+        [label setText:[NSString stringWithFormat:@"%@/%@", dict[@"first"], dict[@"second"]]];
+    }
+    return label;
 }
 
 #pragma mark Animating
@@ -143,31 +165,35 @@
 - (void)updateStats:(NSNotification *)item {
     
     Card *card = (Card *)item.object;
-    for (NSDictionary *item in self.labelsArray) {
-        if ([card.rarity isEqualToString:item[@"rarity"]]) {
-            UILabel *label = item[@"label"];
-//            label.text = (card.isGolden ?  : );
-//            
-//            [(UILabel *)item[@"label"] setText:<#(NSString *)#>]
-            break;
+    card.cardModel.ownedAmount = @(card.cardModel.ownedAmount.integerValue + 1);
+    
+    UserModel *user = [UserModel MR_findFirst];
+    if (![user.cards containsObject:card.cardModel])
+        [user addCardsObject:card.cardModel];
+    
+    for (NSDictionary *dict in self.labelsArray) {
+        if ([card.rarity isEqualToString:dict[@"rarity"]]) {
+            [UserModel updatePropertiesByRarity:card.rarity isGolden:card.isGolden];
+            NSDictionary *userDict = [UserModel getPropertiesByRarity:card.rarity];
+            UILabel *label = dict[@"label"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [label setText:[NSString stringWithFormat:@"%@/%@", userDict[@"first"], userDict[@"second"]]];
+            });
+            return;
         }
     }
+    /*
+     сделать normalCards / goldenCards NSSets для userModel
+     проверку на голден и потом запись в массив как щас
+     добавить cardModel ещё 1 поле - goldenCount / normalCount
+     */
 }
 
 - (void)updatePackCount {
     
-    // label +1
-}
-
-- (UILabel *)createContLabel:(CGRect)rect {
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    [label setFont:[UIFont fontWithName:@"Belwe-Bold" size:9]];
-    [label setTextAlignment:NSTextAlignmentLeft];
-    [label setText:@"123/5"]; // from model ?
-    label.textColor = [UIColor blackColor];
-    
-    return label;
+    UserModel *user = [UserModel MR_findFirst];
+    user.openedPacks = @(user.openedPacks.integerValue + 1);
+    [self.packLabel setText:user.openedPacks.stringValue];
 }
 
 @end
