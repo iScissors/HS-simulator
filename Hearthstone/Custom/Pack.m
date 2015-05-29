@@ -60,6 +60,7 @@
         }
         [card rollCard:self.packModel];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"packOpened" object:nil];
 }
 
 @end

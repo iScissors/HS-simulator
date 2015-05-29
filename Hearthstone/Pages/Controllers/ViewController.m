@@ -45,7 +45,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(checkForLastCard)
-                                                 name:@"cardNotification"
+                                                 name:@"cardOpened"
                                                object:nil];
 }
 

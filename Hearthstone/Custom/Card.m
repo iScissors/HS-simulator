@@ -28,10 +28,6 @@
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
-@property (nonatomic) NSString *rarity;
-
-@property (nonatomic) BOOL isGolden;
-
 @end
 
 @implementation Card
@@ -80,7 +76,7 @@
         }];
         [self startFloating];
     }];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"cardNotification" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"cardOpened" object:self];
 }
 
 - (void)rollCard:(PackModel *)packType {
@@ -88,11 +84,11 @@
     RarityModel *rarity = [RarityModel MR_findFirstByAttribute:@"rarityType" withValue:self.rarity];
     NSArray *cardsArray = [CardModel MR_findAllWithPredicate:
                            [NSPredicate predicateWithFormat:@"packType == %@ AND rarity == %@", packType, rarity]];
-    CardModel *card = [cardsArray objectAtIndex:arc4random_uniform((uint)cardsArray.count)];
+    self.cardModel = [cardsArray objectAtIndex:arc4random_uniform((uint)cardsArray.count)];
     
     // Image request
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", (self.isGolden ? card.imageGolden : card.image)]];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", (self.isGolden ? self.cardModel.imageGolden : self.cardModel.image)]];
         if (self.isGolden)
             self.frontImage = [UIImage animatedImageWithAnimatedGIFURL:url];
         else {

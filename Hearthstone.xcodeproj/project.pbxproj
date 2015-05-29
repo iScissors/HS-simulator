@@ -28,6 +28,7 @@
 		84C2A4CB1B164FC60097043E /* StatsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4CA1B164FC60097043E /* StatsHelper.m */; };
 		84C2A4CE1B1687720097043E /* PackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4CD1B1687720097043E /* PackModel.m */; };
 		84C2A4D11B1687720097043E /* RarityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4D01B1687720097043E /* RarityModel.m */; };
+		84FC7DBF1B1889C100BD3E08 /* Belwe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FC7DBE1B1889C100BD3E08 /* Belwe-Bold.ttf */; };
 		BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		84C2A4CD1B1687720097043E /* PackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackModel.m; sourceTree = "<group>"; };
 		84C2A4CF1B1687720097043E /* RarityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityModel.h; sourceTree = "<group>"; };
 		84C2A4D01B1687720097043E /* RarityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityModel.m; sourceTree = "<group>"; };
+		84FC7DBE1B1889C100BD3E08 /* Belwe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Belwe-Bold.ttf"; sourceTree = "<group>"; };
 		8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332B28F6A12612777944B96 /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +174,7 @@
 		8477D2F71B06730000DBAEBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84FC7DBE1B1889C100BD3E08 /* Belwe-Bold.ttf */,
 				84A159781B15E58C00D72C7B /* MR data.bundle */,
 				8477D3071B06730000DBAEBE /* Images.xcassets */,
 				8477D2F81B06730000DBAEBE /* Info.plist */,
@@ -349,6 +352,7 @@
 				8477D3261B06748E00DBAEBE /* LaunchScreen.xib in Resources */,
 				8477D3081B06730000DBAEBE /* Images.xcassets in Resources */,
 				84A159791B15E58C00D72C7B /* MR data.bundle in Resources */,
+				84FC7DBF1B1889C100BD3E08 /* Belwe-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

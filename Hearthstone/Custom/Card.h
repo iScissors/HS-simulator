@@ -12,14 +12,17 @@
 
 @interface Card : UIButton
 
+@property (strong, nonatomic) CardModel *cardModel;
+
+@property (nonatomic) NSString *rarity;
+
+@property (nonatomic) BOOL isGolden;
+
+
 - (id)initWithBack:(NSString *)back;
 
 - (BOOL)rollRarity;
 
 - (void)rollCard:(PackModel *)packType;
-
-- (void)startFloating;
-
-- (void)turnCard;
 
 @end
