@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) PackModel *packType;
 
+@property (strong, nonatomic) NSString *backType;
+
 @end
 
 @implementation ShopViewController
@@ -34,13 +36,17 @@
 - (IBAction)returnToMainView:(id)sender {
     
     if (self.packType)
-        self.delegate.packModel = self.packType;    
+        self.delegate.packModel = self.packType;
+    
+//    if (self.backType) {
+//        self.delegate.backType = self.packType;
+//    }
     
     [self.delegate performSelector:@selector(dismissBlur)];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark Support
+#pragma mark Pack logic
 
 - (IBAction)selectPack:(id)sender {
     
@@ -70,5 +76,9 @@
     [self.gvgPack setImage:[UIImage imageNamed:@"gvgBlue"] forState:UIControlStateSelected];
     [self.gvgPack setImage:[UIImage imageNamed:@"gvgGrey"] forState:UIControlStateNormal];
 }
+
+#pragma mark Backs logic
+
+
 
 @end
