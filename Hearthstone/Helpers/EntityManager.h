@@ -14,6 +14,8 @@
 
 + (void)setPackModelData;
 
++ (void)setCardBacksData;
+
 + (void)setCardModelData:(NSString *)pack;
 
 + (void)setUserModel;

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CardBackModel" representedClassName="CardBackModel" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="CardModel" representedClassName="CardModel" syncable="YES">
         <attribute name="cardId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
@@ -36,5 +40,6 @@
         <element name="PackModel" positionX="0" positionY="63" width="128" height="88"/>
         <element name="RarityModel" positionX="-54" positionY="0" width="128" height="73"/>
         <element name="UserModel" positionX="-27" positionY="63" width="128" height="193"/>
+        <element name="CardBackModel" positionX="-18" positionY="126" width="128" height="75"/>
     </elements>
 </model>

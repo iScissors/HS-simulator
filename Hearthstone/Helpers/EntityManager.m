@@ -13,8 +13,13 @@
 #import "PackModel.h"
 #import "UserModel.h"
 #import "UNIRest.h"
+#import "CardBackModel+Addition.h"
+
+#define MashApeKey @"tnrzpmUXIBmshaYtv8WUB2I9nbdXp1EKWmNjsnanl0mfqZQH07"
 
 @implementation EntityManager
+
+#pragma mark Main logic
 
 + (NSArray *)getDataFromFile:(NSString *)fileName {
     
@@ -30,7 +35,7 @@
 
 + (void)setRarityModelData {
     
-    if ([RarityModel MR_findAll].count == 0) {
+    if (![RarityModel MR_hasAtLeastOneEntity]) {
         NSMutableArray *modelArray = [NSMutableArray new];
         for (NSString *item in [EntityManager getDataFromFile:@"Rarity"]) {
             RarityModel *model = [RarityModel MR_createEntity];
@@ -43,7 +48,8 @@
 }
 
 + (void)setPackModelData {
-    if ([PackModel MR_findAll].count == 0) {
+    
+    if (![PackModel MR_hasAtLeastOneEntity]) {
         NSArray *images = @[@"classicPack", @"gvgPack"];
         NSMutableArray *modelArray = [NSMutableArray new];
         int i = 0;
@@ -59,10 +65,23 @@
     }
 }
 
++ (void)setCardBacksData {
+    
+        NSDictionary *headers = @{@"X-Mashape-Key": MashApeKey};
+        [[UNIRest get:^(UNISimpleRequest *request) {
+            [request setUrl:@"https://omgvamp-hearthstone-v1.p.mashape.com/cardbacks"];
+            [request setHeaders:headers];
+        }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
+            NSLog(@"=== Respose Code: %ld ===", (long)response.code);
+            
+            [CardBackModel setupModels:[response.body.object.allValues mutableCopy]];
+            NSLog(@"=== CardsBacks added ===");
+        }];
+}
+
 + (void)setCardModelData:(NSString *)pack {
 
-    NSDictionary *headers = @{@"X-Mashape-Key": @"tnrzpmUXIBmshaYtv8WUB2I9nbdXp1EKWmNjsnanl0mfqZQH07"};
-    
+    NSDictionary *headers = @{@"X-Mashape-Key": MashApeKey};
     [[UNIRest get:^(UNISimpleRequest *request) {
         [request setUrl:[NSString stringWithFormat:@"https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/%@?collectible=1", pack]];
         [request setHeaders:headers];
@@ -82,7 +101,7 @@
 
 + (void)setUserModel {
     
-    if (![UserModel MR_findFirst]) {
+    if (![UserModel MR_hasAtLeastOneEntity]) {
         [UserModel MR_createEntity];
         [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
     }

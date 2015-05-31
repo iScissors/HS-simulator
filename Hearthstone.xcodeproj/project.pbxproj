@@ -31,6 +31,8 @@
 		84FC7DC21B18F85A00BD3E08 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC11B18F85A00BD3E08 /* UserModel.m */; };
 		84FC7DC51B18F85A00BD3E08 /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC41B18F85A00BD3E08 /* CardModel.m */; };
 		84FC7DC81B190C7500BD3E08 /* UserModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */; };
+		84FC7DCB1B1B1AFE00BD3E08 /* CardBackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DCA1B1B1AFE00BD3E08 /* CardBackModel.m */; };
+		84FC7DCE1B1B25C200BD3E08 /* CardBackModel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7DCD1B1B25C200BD3E08 /* CardBackModel+Addition.m */; };
 		BEC528E252FF7B2255F06B3C /* libPods-Hearthstone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,10 @@
 		84FC7DC41B18F85A00BD3E08 /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
 		84FC7DC61B190C7500BD3E08 /* UserModel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserModel+Addition.h"; sourceTree = "<group>"; };
 		84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserModel+Addition.m"; sourceTree = "<group>"; };
+		84FC7DC91B1B1AFE00BD3E08 /* CardBackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBackModel.h; sourceTree = "<group>"; };
+		84FC7DCA1B1B1AFE00BD3E08 /* CardBackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBackModel.m; sourceTree = "<group>"; };
+		84FC7DCC1B1B25C200BD3E08 /* CardBackModel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CardBackModel+Addition.h"; sourceTree = "<group>"; };
+		84FC7DCD1B1B25C200BD3E08 /* CardBackModel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CardBackModel+Addition.m"; sourceTree = "<group>"; };
 		8AFB4CD4D335922D8F260945 /* libPods-Hearthstone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hearthstone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332B28F6A12612777944B96 /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +136,8 @@
 				842CF0F81B0BD47A00D77FAA /* CardModel+Addition.m */,
 				84FC7DC61B190C7500BD3E08 /* UserModel+Addition.h */,
 				84FC7DC71B190C7500BD3E08 /* UserModel+Addition.m */,
+				84FC7DCC1B1B25C200BD3E08 /* CardBackModel+Addition.h */,
+				84FC7DCD1B1B25C200BD3E08 /* CardBackModel+Addition.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -235,6 +243,8 @@
 			children = (
 				842CF0F61B0BD47A00D77FAA /* Categories */,
 				8477D32D1B069EDD00DBAEBE /* Hearthstone.xcdatamodeld */,
+				84FC7DC91B1B1AFE00BD3E08 /* CardBackModel.h */,
+				84FC7DCA1B1B1AFE00BD3E08 /* CardBackModel.m */,
 				84FC7DC31B18F85A00BD3E08 /* CardModel.h */,
 				84FC7DC41B18F85A00BD3E08 /* CardModel.m */,
 				84FC7DC01B18F85A00BD3E08 /* UserModel.h */,
@@ -413,6 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC7DCE1B1B25C200BD3E08 /* CardBackModel+Addition.m in Sources */,
+				84FC7DCB1B1B1AFE00BD3E08 /* CardBackModel.m in Sources */,
 				8477D32B1B06985A00DBAEBE /* Card.m in Sources */,
 				8477D2FD1B06730000DBAEBE /* AppDelegate.m in Sources */,
 				84FC7DC21B18F85A00BD3E08 /* UserModel.m in Sources */,

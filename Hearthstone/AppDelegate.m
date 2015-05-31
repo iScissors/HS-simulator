@@ -26,8 +26,15 @@
     [EntityManager setUserModel];
     
     // Request
-    [EntityManager setCardModelData:@"Classic"];
-    [EntityManager setCardModelData:@"Goblins%20vs%20Gnomes"];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [EntityManager setCardModelData:@"Classic"];
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [EntityManager setCardModelData:@"Goblins%20vs%20Gnomes"];
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [EntityManager setCardBacksData];
+    });
     
     return YES;
 }
