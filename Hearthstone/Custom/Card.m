@@ -32,7 +32,7 @@
 
 @implementation Card
 
--(id)initWithBack:(NSString *)back {
+- (id)initWithBack:(NSString *)back {
     
     self = [super init];
     if (self) {

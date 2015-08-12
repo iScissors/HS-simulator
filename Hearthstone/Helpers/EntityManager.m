@@ -67,16 +67,21 @@
 
 + (void)setCardBacksData {
     
+    if (![CardBackModel MR_hasAtLeastOneEntity]) {
         NSDictionary *headers = @{@"X-Mashape-Key": MashApeKey};
         [[UNIRest get:^(UNISimpleRequest *request) {
             [request setUrl:@"https://omgvamp-hearthstone-v1.p.mashape.com/cardbacks"];
             [request setHeaders:headers];
         }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
             NSLog(@"=== Respose Code: %ld ===", (long)response.code);
-            
-            [CardBackModel setupModels:[response.body.object.allValues mutableCopy]];
+        
+            for (NSDictionary *item in response.body.array)
+                [[CardBackModel MR_createEntity] configureModel:item];
+        
+            [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
             NSLog(@"=== CardsBacks added ===");
         }];
+    }
 }
 
 + (void)setCardModelData:(NSString *)pack {
