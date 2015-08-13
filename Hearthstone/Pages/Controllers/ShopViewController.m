@@ -29,7 +29,12 @@
 @end
 
 @implementation ShopViewController {
+    
     NSMutableArray *cardBacksArray;
+    BOOL isLoadingFinished;
+    NSTimer *backsTabTimer;
+    BOOL isPacksTabSelected;
+    
 }
 
 #pragma mark Initialization
@@ -37,9 +42,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [self configurePackButtons];
-//    [self configureCardBacks];
-    [self showPacks:self];
+    
+    isPacksTabSelected = YES;
+    [self configurePackButtons];    
+    isLoadingFinished = NO;
     [self loadBacksImages];
 }
 
@@ -57,7 +63,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark Tabs switcjing
+
 - (IBAction)showPacks:(id)sender {
+    
+    if (backsTabTimer) backsTabTimer = nil;
+    
     [UIView animateWithDuration:1
                      animations:^{
                          self.backsCollection.hidden = YES;
@@ -69,18 +80,34 @@
 }
 
 - (IBAction)showBacks:(id)sender {
-    
-    [self.backsCollection reloadData];
-    [self.backsCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]
-                                 atScrollPosition:(UICollectionViewScrollPositionNone)
-                                         animated:NO];
+
+    isPacksTabSelected = NO;
     [UIView animateWithDuration:1
                      animations:^{
                          self.gvgPack.hidden = YES;
                          self.classicPack.hidden = YES;
                      } completion:^(BOOL finished) {
                          self.backsCollection.hidden = NO;
+                         
+                         if ([self checkAndShow])
+                             backsTabTimer = [NSTimer scheduledTimerWithTimeInterval:2
+                                                                              target:self
+                                                                            selector:@selector(checkAndShow)
+                                                                            userInfo:nil
+                                                                             repeats:YES];
                      }];
+}
+
+- (BOOL)checkAndShow {
+    
+    if (isLoadingFinished || [self loadingFinished]) {
+        [self.backsCollection reloadData];
+        [self.backsCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]
+                                     atScrollPosition:(UICollectionViewScrollPositionNone)
+                                             animated:NO];
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark Pack logic
@@ -136,11 +163,14 @@
     
     for (NSDictionary *item in cardBacksArray) {
         if ([item[@"image"] isKindOfClass:[NSNumber class]]) {
-            self.loadingLabel.hidden = NO;
+            if (!isPacksTabSelected) self.loadingLabel.hidden = NO;
             return NO;
         }
     }
+    backsTabTimer = nil;
+    isLoadingFinished = YES;
     self.loadingLabel.hidden = YES;
+    
     return YES;
 }
 
@@ -148,7 +178,7 @@
     
     UICollectionViewCell *cell = [view dequeueReusableCellWithReuseIdentifier:@"CardBack" forIndexPath:indexPath];
     
-    if ([self loadingFinished]) {
+    if (isLoadingFinished) {
         UIImageView *backView = [UIImageView new];
         backView.image = cardBacksArray[indexPath.row][@"image"];
         backView.width = cell.width + cell.width * 0.21896;
@@ -163,7 +193,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return ([self loadingFinished] ? cardBacksArray.count : 0);
+    return (isLoadingFinished || [self loadingFinished] ? cardBacksArray.count : 0);
 }
 
 
